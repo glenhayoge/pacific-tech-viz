@@ -158,12 +158,13 @@ MIT License — free to use, adapt, or build on.
 
 ## 🙌 Acknowledgments
 
-SPC & Pacific Data Hub for open access to high-quality datasets
+- SPC & Pacific Data Hub for open access to high-quality datasets
 
-Recharts & React Graph Gallery for powerful data visualizations
+- Recharts & React Graph Gallery for powerful data visualizations
 
-Vercel/Netlify for smooth deployment workflows
+- Netlify/Github for smooth deployment workflows
 
   
-🇵🇬 From the Papua New Guinea for the Pacific.
-Visualizing the digital journey to 2050.
+> From the Papua New Guinea 🇵🇬 for the Pacific.
+> Visualizing the digital journey to 2050.
+> Glen Hayoge
