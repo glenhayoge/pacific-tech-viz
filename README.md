@@ -1,10 +1,10 @@
-# 🌐 Pacific Connectivity 2050
+# Pacific Connectivity 2050
 
   
 A data-driven web visualization built for the **Pacific DataViz Challenge 2025** — showcasing technology access, digital skills, and connectivity across Pacific Island nations in line with the **Blue Pacific 2050 Strategy**.
 
 
-## 🧠 Project Theme
+## 2025 Data Visualisation Theme
 
 
 **Blue Pacific 2050 – Technology and Connectivity**
@@ -33,18 +33,18 @@ These insights help highlight key disparities and opportunities for regional col
 ---
 
   
-## ✨ Live Demo
+## Live Demo
 
   
 
-> [Coming Soon – deploy to Netlify/Vercel and paste link here]
+> [Coming Soon – deploy to Netlify/Github and will paste link here]
 
   
 
 ---
 
   
-## 📊 Visualizations
+## Visualizations
 
   
 
@@ -52,13 +52,13 @@ Built using [Recharts](https://recharts.org/) and later enhanced with [React Gra
 
   
 
-- 📈 **Internet Usage Over Time** – Track internet adoption per country (2000–2024)
+- **Internet Usage Over Time** – Track internet adoption per country (2000–2024)
 
-- 📊 **4G Coverage Snapshot** – Rank countries by mobile network access
+- **4G Coverage Snapshot** – Rank countries by mobile network access
 
-- 🕸️ **Digital Skills Radar** – Compare digital literacy across nations
+- **Digital Skills Radar** – Compare digital literacy across nations
 
-- 📍 **Cybersecurity vs. Internet Penetration** – See which countries are digitally prepared
+- **Cybersecurity vs. Internet Penetration** – See which countries are digitally prepared
 
   
 
@@ -66,7 +66,7 @@ Built using [Recharts](https://recharts.org/) and later enhanced with [React Gra
 
   
 
-## 🛠️ Tech Stack
+## Tech Stack
 
   
 
@@ -85,7 +85,7 @@ Built using [Recharts](https://recharts.org/) and later enhanced with [React Gra
 ---
 
   
-## 📁 Dataset
+## Dataset
 
   
 
@@ -107,15 +107,15 @@ This app uses official data from the Pacific Data Hub:
 - National cybersecurity indexes
 
 
-> 📅 Time range: 2000–2024
+> Time range: 2000–2024
 
-> 🌍 Countries: 15+ Pacific Island nations
+> Countries: 15+ Pacific Island nations
 
   
 ---
 
 
-## 📖 How to Use
+## How to Use
 
 
 
@@ -142,7 +142,7 @@ npm run dev
 ```
 
 
-## ✍️ Submission
+## Submission
 
 This project was created as an entry for the Pacific DataViz Challenge 2025, hosted at
 
@@ -152,7 +152,7 @@ This project was created as an entry for the Pacific DataViz Challenge 2025, hos
 The challenge explores creative uses of official Pacific data to inform, educate, and inspire regional action.
 
 
-## 📄 License
+## License
 
 MIT License — free to use, adapt, or build on.
 
@@ -165,6 +165,5 @@ Recharts & React Graph Gallery for powerful data visualizations
 Vercel/Netlify for smooth deployment workflows
 
   
-## 🇵🇬 From the Papua New Guinea for the Pacific.
-
+🇵🇬 From the Papua New Guinea for the Pacific.
 Visualizing the digital journey to 2050.
