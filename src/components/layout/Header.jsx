@@ -5,7 +5,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="text-center mb-12">
-      <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+      <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-white">
         Pacific Connectivity 2050
       </h1>
       <p className="text-xl text-gray-300 max-w-3xl mx-auto">
