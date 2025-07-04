@@ -87,29 +87,35 @@ Built using [Recharts](https://recharts.org/) and later enhanced with [React Gra
   
 ## Dataset
 
-  
-
 This app uses official data from the Pacific Data Hub:
 
-
 - [Blue Pacific 2050 Indicators – Technology & Connectivity](https://pacificdata.org/data/dataset/blue-pacific-2050-technology-and-connectivity-thematic-area-7-df-bp50-7)
+- **File**: `SPC_Tech_Connectivity_2025.csv` (1,835 records)
 
-- Additional visual indicators include:
+### Key Indicators
 
-- Mobile ownership rates
+- **IT_USE_ii99** - Internet usage by individuals (756 records)
+- **IT_NET_BBND** - Broadband network access (357 records)  
+- **IT_MOB_4GNTWK** - 4G mobile network coverage (56 records)
+- **IT_MOB_OWN** - Mobile phone ownership (26 records)
+- **NCSI_RANK** - National Cybersecurity Index ranking (4 records)
 
-- Internet usage %
+### Sample Data Records
 
-- 4G coverage
+```csv
+INDICATOR,Pacific Island Countries,TIME_PERIOD,OBS_VALUE,UNIT_MEASURE
+IT_USE_ii99,Tuvalu,2019,84,PERCENT
+IT_USE_ii99,Vanuatu,2019,59.5,PERCENT  
+IT_USE_ii99,Kiribati,2020,37.6,PERCENT
+IT_MOB_OWN,Tuvalu,2019,78,units
+IT_NET_BBND,Fiji,2022,41.3,PERCENT
+```
 
-- Digital skills (email use, software installs)
+### Coverage
 
-- National cybersecurity indexes
-
-
-> Time range: 2000–2024
-
-> Countries: 15+ Pacific Island nations
+- **Time range**: 2003–2024 (peak data from 2013-2021)
+- **Countries**: 15+ Pacific Island nations including Fiji, Tonga, Vanuatu, Samoa, Kiribati, Tuvalu, etc.
+- **Demographics**: Breakdown by age, gender, urban/rural, education level
 
   
 ---
