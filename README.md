@@ -156,7 +156,7 @@ The challenge explores creative uses of official Pacific data to inform, educate
 
 MIT License — free to use, adapt, or build on.
 
-## 🙌 Acknowledgments
+## Acknowledgments & Credits
 
 - SPC & Pacific Data Hub for open access to high-quality datasets
 
