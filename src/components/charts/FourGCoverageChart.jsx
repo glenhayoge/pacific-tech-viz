@@ -99,7 +99,7 @@ const FourGCoverageChart = () => {
                 borderRadius: '8px',
                 color: '#F9FAFB'
               }}
-              formatter={(value, name, props) => [
+              formatter={(value) => [
                 `${value}%`, 
                 '4G Coverage',
                 { color: '#10B981' }
