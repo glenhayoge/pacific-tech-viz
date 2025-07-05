@@ -62,7 +62,7 @@ const InternetUsageChart = () => {
   if (loading) {
     return (
       <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
-        <h3 className="text-xl font-semibold mb-4">📈 Internet Usage Over Time</h3>
+        <h3 className="text-2xl font-semibold mb-4">Internet Usage Over Time</h3>
         <div className="h-64 flex items-center justify-center text-gray-400">
           <p>Loading data...</p>
         </div>
@@ -71,12 +71,12 @@ const InternetUsageChart = () => {
   }
 
   return (
-    <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
-      <h3 className="text-xl font-semibold mb-4">📈 Internet Usage Over Time</h3>
-      <div style={{ width: '100%', height: '260px' }}>
-        <ResponsiveContainer width="100%" height={240}>
+    <div className="bg-gray-800 rounded-lg p-8 shadow-lg -12">
+      <h3 className="text-2xl font-semibold mb-4">Internet Usage Over Time</h3>
+      <div style={{ width: '100%', height: '420px' }}>
+        <ResponsiveContainer width="100%" height={420}>
           <LineChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
+            <CartesianGrid strokeDasharray="5 5" stroke="#374151" />
             <XAxis 
               dataKey="year" 
               stroke="#9CA3AF" 

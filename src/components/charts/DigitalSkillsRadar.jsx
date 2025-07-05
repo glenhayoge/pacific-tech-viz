@@ -26,7 +26,7 @@ const DigitalSkillsRadar = () => {
   if (loading) {
     return (
       <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
-        <h3 className="text-xl font-semibold mb-4">🕸️ Digital Skills Radar</h3>
+        <h3 className="text-xl font-semibold mb-4">Digital Skills Radar</h3>
         <div className="h-64 flex items-center justify-center text-gray-400">
           <p>Loading data...</p>
         </div>
@@ -36,9 +36,9 @@ const DigitalSkillsRadar = () => {
 
   return (
     <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
-      <h3 className="text-xl font-semibold mb-4">🕸️ Digital Skills Radar</h3>
-      <div style={{ width: '100%', height: '260px' }}>
-        <ResponsiveContainer width="100%" height={240}>
+      <h3 className="text-xl font-semibold mb-4">Digital Skills Radar</h3>
+      <div style={{ width: '100%', height: '420px' }}>
+        <ResponsiveContainer width="100%" height={420}>
           <RadarChart data={data} margin={{ top: 20, right: 30, bottom: 20, left: 30 }}>
             <PolarGrid stroke="#374151" />
             <PolarAngleAxis 

@@ -29,7 +29,7 @@ const CybersecurityScatterPlot = () => {
   if (loading) {
     return (
       <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
-        <h3 className="text-xl font-semibold mb-4">🔒 Cybersecurity vs Internet Penetration</h3>
+        <h3 className="text-xl font-semibold mb-4">Cybersecurity vs Internet Penetration</h3>
         <div className="h-64 flex items-center justify-center text-gray-400">
           <p>Loading data...</p>
         </div>
@@ -39,7 +39,7 @@ const CybersecurityScatterPlot = () => {
 
   return (
     <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
-      <h3 className="text-xl font-semibold mb-4">🔒 Digital Readiness Comparison</h3>
+      <h3 className="text-xl font-semibold mb-4">Digital Readiness Comparison</h3>
       <div style={{ width: '100%', height: '260px' }}>
         <ResponsiveContainer width="100%" height={240}>
           <ScatterChart margin={{ top: 20, right: 20, bottom: 40, left: 40 }}>
