@@ -120,13 +120,13 @@ const CybersecurityScatterPlot = () => {
   }
 
   return (
-    <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
+    <div className="bg-gray-800 rounded-lg p-6 shadow-lg" style={{ marginTop: '100px', marginBottom: '100px' }}>
       <h3 className="text-xl font-semibold mb-4">Digital Readiness Comparison</h3>
       <div className="mb-2 text-sm text-gray-400">
         Cybersecurity Readiness vs Internet Usage (Latest available data)
       </div>
-      <div style={{ width: '100%', height: '260px' }}>
-        <ResponsiveContainer width="100%" height={240}>
+      <div style={{ width: '100%', height: '420px' }}>
+        <ResponsiveContainer width="100%" height={420}>
           <ScatterChart margin={{ top: 20, right: 20, bottom: 40, left: 40 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
             <XAxis 

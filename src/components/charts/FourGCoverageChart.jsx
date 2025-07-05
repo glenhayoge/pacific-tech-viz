@@ -68,7 +68,7 @@ const FourGCoverageChart = () => {
   }
 
   return (
-    <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
+    <div className="bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-80 mt-8" style={{ marginTop: '100px', marginBottom: '100px' }}>
       <h3 className="text-xl font-semibold mb-4">4G Coverage by Country (Most Recent Data)</h3>
       <div style={{ width: '100%', height: '500px' }}>
         <ResponsiveContainer width="100%" height={480}>
