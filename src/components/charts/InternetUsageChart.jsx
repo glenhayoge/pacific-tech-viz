@@ -3,28 +3,60 @@
 
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-// Sample data for Pacific Internet Usage visualization
+import { parseConnectivityData } from '../../data/dataUtils';
 
 const InternetUsageChart = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Sample data representing Pacific Island internet usage trends
-    const sampleData = [
-      { year: 2015, average: 25.5 },
-      { year: 2016, average: 32.1 },
-      { year: 2017, average: 38.7 },
-      { year: 2018, average: 45.2 },
-      { year: 2019, average: 52.8 },
-      { year: 2020, average: 58.3 },
-      { year: 2021, average: 65.1 },
-      { year: 2022, average: 71.4 },
-      { year: 2023, average: 76.9 }
-    ];
+    const loadData = async () => {
+      try {
+        const response = await fetch('/data/SPC_Tech_Connectivity_2025.csv');
+        const csvText = await response.text();
+        const parsed = parseConnectivityData(csvText);
+        
+        // Filter for internet usage indicator
+        const internetData = parsed.filter(row => 
+          row.indicator === 'Proportion of individuals using the Internet'
+        );
+        
+        // Group by country and year, calculate average per year
+        const groupedData = {};
+        internetData.forEach(row => {
+          const year = row.year;
+          if (!groupedData[year]) {
+            groupedData[year] = { year, countries: [], total: 0, count: 0 };
+          }
+          if (row.value > 0) {
+            groupedData[year].countries.push({ country: row.country, value: row.value });
+            groupedData[year].total += row.value;
+            groupedData[year].count += 1;
+          }
+        });
+        
+        // Transform to chart format with country lines
+        const yearData = Object.values(groupedData)
+          .filter(item => item.count > 0)
+          .map(item => ({
+            year: item.year,
+            average: (item.total / item.count).toFixed(1),
+            ...item.countries.reduce((acc, country) => {
+              acc[country.country] = country.value;
+              return acc;
+            }, {})
+          }))
+          .sort((a, b) => a.year - b.year);
+        
+        setData(yearData);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error loading data:', error);
+        setLoading(false);
+      }
+    };
     
-    setData(sampleData);
-    setLoading(false);
+    loadData();
   }, []);
 
   if (loading) {
@@ -68,10 +100,29 @@ const InternetUsageChart = () => {
               type="monotone" 
               dataKey="average" 
               stroke="#3B82F6" 
-              strokeWidth={2}
+              strokeWidth={3}
               name="Pacific Average"
-              dot={{ fill: '#3B82F6', strokeWidth: 2 }}
+              dot={{ fill: '#3B82F6', strokeWidth: 2, r: 4 }}
             />
+            {data.length > 0 && Object.keys(data[0])
+              .filter(key => key !== 'year' && key !== 'average')
+              .slice(0, 5)
+              .map((country, index) => {
+                const colors = ['#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#F97316'];
+                return (
+                  <Line
+                    key={country}
+                    type="monotone"
+                    dataKey={country}
+                    stroke={colors[index]}
+                    strokeWidth={2}
+                    name={country}
+                    dot={{ fill: colors[index], strokeWidth: 1, r: 3 }}
+                    connectNulls={false}
+                  />
+                );
+              })
+            }
           </LineChart>
         </ResponsiveContainer>
 
