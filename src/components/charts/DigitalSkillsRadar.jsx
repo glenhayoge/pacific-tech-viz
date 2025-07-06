@@ -122,7 +122,7 @@ const DigitalSkillsRadar = () => {
   if (data.length === 0) {
     return (
       <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
-        <h3 className="text-xl font-semibold mb-4">📊 Digital Skills Comparison</h3>
+        <h3 className="text-xl font-semibold mb-4">Digital Skills Comparison</h3>
         <div className="h-64 flex items-center justify-center text-gray-400">
           <p>No digital skills data available</p>
         </div>
@@ -140,13 +140,13 @@ const DigitalSkillsRadar = () => {
   };
 
   return (
-    <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
-      <h3 className="text-xl font-semibold mb-4">📊 Digital Skills Comparison</h3>
+    <div className="bg-gray-800 rounded-lg p-6 shadow-lg" style={{ marginTop: '100px', marginBottom: '100px' }}>
+      <h3 className="text-xl font-semibold mb-4">Digital Skills Comparison</h3>
       <div className="text-xs text-gray-400 mb-2">
         Countries: {countries.join(', ')} | Data points: {data.length}
       </div>
       <div style={{ width: '100%', height: '420px' }}>
-        <ResponsiveContainer width="100%" height={420}>
+        <ResponsiveContainer width="100%" height={640}>
           <RadarChart data={data} margin={{ top: 20, right: 30, bottom: 20, left: 30 }}>
             <PolarGrid stroke="#374151" />
             <PolarAngleAxis 

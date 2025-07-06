@@ -71,7 +71,7 @@ const InternetUsageChart = () => {
   }
 
   return (
-    <div className="bg-gray-800 rounded-lg p-8 shadow-lg -12">
+    <div className="bg-gray-800 rounded-lg p-8 shadow-lg" style={{ marginTop: '100px', marginBottom: '100px' }}>
       <h3 className="text-2xl font-semibold mb-4">Internet Usage Over Time</h3>
       <div style={{ width: '100%', height: '420px' }}>
         <ResponsiveContainer width="100%" height={420}>
